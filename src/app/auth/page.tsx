@@ -192,7 +192,9 @@ export default function AuthPage() {
       {/* Subtle Bottom Attribution */}
       <footer className="p-6 text-center text-xs text-slate-500">
         <div>&copy; {new Date().getFullYear()} BYLDORA Technologies.</div>
-        <div className="text-slate-400 text-[11px] mt-0.5">An EM300.co Company</div>
+        <div className="text-slate-400 text-[11px] mt-0.5">
+          An <a href="https://em300.co" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white underline underline-offset-2 transition-colors font-semibold">EM300.co</a> Company
+        </div>
       </footer>
     </div>
   );

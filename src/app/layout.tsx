@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/lib/languageContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -52,7 +53,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased min-h-screen flex flex-col bg-byldora-warm-white text-byldora-text-primary selection:bg-byldora-electric selection:text-white">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,35 +1,40 @@
+'use client';
+
 import React from 'react';
 import { FileCode2, Send, Cpu, Network, ShieldCheck } from 'lucide-react';
-
-const PILLARS = [
-  {
-    title: 'BOQ Intelligence',
-    subtitle: 'Hierarchical line-item parsing & automated trade assignment',
-    icon: FileCode2,
-  },
-  {
-    title: 'RFQ Automation',
-    subtitle: 'Instant package bundling & multi-channel supplier distribution',
-    icon: Send,
-  },
-  {
-    title: 'Bid Intelligence',
-    subtitle: 'Real landed transaction economics & specification matching',
-    icon: Cpu,
-  },
-  {
-    title: 'Supplier Network',
-    subtitle: 'Frictionless engagement via WhatsApp, PDF and Excel',
-    icon: Network,
-  },
-  {
-    title: 'Procurement Control',
-    subtitle: 'Audit trails, commercial signoff & verified PO execution',
-    icon: ShieldCheck,
-  },
-];
+import { useLanguage } from '@/lib/languageContext';
 
 export default function TrustStrip() {
+  const { t } = useLanguage();
+
+  const PILLARS = [
+    {
+      title: t.trust.p1Title,
+      subtitle: t.trust.p1Subtitle,
+      icon: FileCode2,
+    },
+    {
+      title: t.trust.p2Title,
+      subtitle: t.trust.p2Subtitle,
+      icon: Send,
+    },
+    {
+      title: t.trust.p3Title,
+      subtitle: t.trust.p3Subtitle,
+      icon: Cpu,
+    },
+    {
+      title: t.trust.p4Title,
+      subtitle: t.trust.p4Subtitle,
+      icon: Network,
+    },
+    {
+      title: t.trust.p5Title,
+      subtitle: t.trust.p5Subtitle,
+      icon: ShieldCheck,
+    },
+  ];
+
   return (
     <section id="value-strip" className="bg-[#1C2636] border-b border-[#2A384C] py-8 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

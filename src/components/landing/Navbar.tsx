@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '@/lib/languageContext';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +38,7 @@ export default function Navbar() {
                 BYLDORA
               </span>
               <span className="text-[10px] tracking-wider text-slate-400 uppercase font-medium mt-0.5">
-                Procurement Intelligence
+                {language === 'fr' ? 'Intelligence des Achats BTP' : 'Procurement Intelligence'}
               </span>
             </div>
           </Link>
@@ -47,59 +49,110 @@ export default function Navbar() {
               href="#value-strip"
               className="hover:text-white transition-colors focus:text-white"
             >
-              Platform
+              {t.nav.platform}
             </Link>
             <Link
               href="#how-it-works"
               className="hover:text-white transition-colors focus:text-white"
             >
-              How It Works
+              {t.nav.howItWorks}
             </Link>
             <Link
               href="#product-visualization"
               className="hover:text-white transition-colors focus:text-white"
             >
-              Bid Comparison
+              {t.nav.bidComparison}
             </Link>
             <Link
               href="#bid-intelligence"
               className="hover:text-white transition-colors focus:text-white"
             >
-              Intelligence
+              {t.nav.intelligence}
             </Link>
             <Link
               href="#construction-native"
               className="hover:text-white transition-colors focus:text-white"
             >
-              Enterprise
+              {t.nav.enterprise}
             </Link>
             <Link
               href="#future-finance"
               className="hover:text-white transition-colors focus:text-white"
             >
-              Capital Layer
+              {t.nav.capitalLayer}
             </Link>
           </nav>
 
-          {/* Actions */}
+          {/* Actions & Language Switcher */}
           <div className="hidden md:flex items-center gap-4">
+            
+            {/* Bilingual Toggle Button (EN | FR) */}
+            <div className="flex items-center bg-[#1C2636] border border-slate-700 rounded-[8px] p-1 text-xs font-mono">
+              <button
+                type="button"
+                onClick={() => setLanguage('en')}
+                className={`px-2 py-0.5 rounded-[4px] transition-colors font-bold ${
+                  language === 'en'
+                    ? 'bg-[#2563EB] text-white'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+                title="Switch to English"
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                onClick={() => setLanguage('fr')}
+                className={`px-2 py-0.5 rounded-[4px] transition-colors font-bold ${
+                  language === 'fr'
+                    ? 'bg-[#2563EB] text-white'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+                title="Passer en Français"
+              >
+                FR
+              </button>
+            </div>
+
             <Link
               href="/auth"
               className="text-sm font-medium text-slate-300 hover:text-white px-3 py-2 transition-colors"
             >
-              Sign In
+              {t.nav.signIn}
             </Link>
             <Link
               href="/dashboard"
               className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] rounded-[8px] transition-colors shadow-sm focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0B1220]"
             >
-              <span>Start a Project</span>
+              <span>{t.nav.startProject}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           {/* Mobile menu trigger */}
-          <div className="flex md:hidden">
+          <div className="flex md:hidden items-center gap-2">
+            {/* Mobile language switch */}
+            <div className="flex items-center bg-[#1C2636] border border-slate-700 rounded-[6px] p-0.5 text-xs font-mono">
+              <button
+                type="button"
+                onClick={() => setLanguage('en')}
+                className={`px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold ${
+                  language === 'en' ? 'bg-[#2563EB] text-white' : 'text-slate-400'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                onClick={() => setLanguage('fr')}
+                className={`px-1.5 py-0.5 rounded-[3px] text-[10px] font-bold ${
+                  language === 'fr' ? 'bg-[#2563EB] text-white' : 'text-slate-400'
+                }`}
+              >
+                FR
+              </button>
+            </div>
+
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -121,35 +174,35 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-[#1C2636]/60 rounded-md"
           >
-            Platform
+            {t.nav.platform}
           </Link>
           <Link
             href="#how-it-works"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-[#1C2636]/60 rounded-md"
           >
-            How It Works
+            {t.nav.howItWorks}
           </Link>
           <Link
             href="#product-visualization"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-[#1C2636]/60 rounded-md"
           >
-            Bid Comparison
+            {t.nav.bidComparison}
           </Link>
           <Link
             href="#bid-intelligence"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-[#1C2636]/60 rounded-md"
           >
-            Intelligence
+            {t.nav.intelligence}
           </Link>
           <Link
             href="#construction-native"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-[#1C2636]/60 rounded-md"
           >
-            Enterprise Scope
+            {t.nav.enterprise}
           </Link>
           <div className="pt-4 border-t border-[#1C2636] flex flex-col gap-2">
             <Link
@@ -157,14 +210,14 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center px-4 py-2.5 text-sm font-medium text-slate-300 bg-[#1C2636] hover:bg-[#243247] rounded-[8px]"
             >
-              Sign In
+              {t.nav.signIn}
             </Link>
             <Link
               href="/dashboard"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center px-4 py-2.5 text-sm font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] rounded-[8px]"
             >
-              Start a Project
+              {t.nav.startProject}
             </Link>
           </div>
         </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { 
   FileSpreadsheet, 
@@ -9,47 +11,50 @@ import {
   ArrowRight,
   AlertCircle
 } from 'lucide-react';
-
-const FRAGMENTATIONS = [
-  {
-    name: 'Excel',
-    icon: FileSpreadsheet,
-    label: 'Version Drift & Broken Formulas',
-    detail: 'Multiple spreadsheet iterations with unsynchronized unit rates, formula corruption, and no central audit log.',
-  },
-  {
-    name: 'PDF',
-    icon: FileText,
-    label: 'Unsearchable Commercial Quotes',
-    detail: 'Non-standardized supplier terms, buried footnotes, and unparseable bill schedules requiring manual re-typing.',
-  },
-  {
-    name: 'Email',
-    icon: Mail,
-    label: 'Lost Attachments & Incomplete Threads',
-    detail: 'Scattered tender revisions, missed clarifications, and untracked addendums buried across personal inboxes.',
-  },
-  {
-    name: 'WhatsApp',
-    icon: MessageSquare,
-    label: 'Informal Commitments & Photos',
-    detail: 'Photo snippets of handwritten quotes and unverified supplier availability lacking legally binding structure.',
-  },
-  {
-    name: 'Phone',
-    icon: PhoneCall,
-    label: 'Verbal Rates With Zero Audit Trail',
-    detail: 'Unrecorded rate concessions and unconfirmed scope boundaries that create painful site disputes upon delivery.',
-  },
-  {
-    name: 'Manual Comparison',
-    icon: GitCompare,
-    label: 'Headline Price Optical Illusions',
-    detail: 'Picking the lowest bottom-line figure without identifying missing transport, excluded cranes, or shifted payment terms.',
-  },
-];
+import { useLanguage } from '@/lib/languageContext';
 
 export default function ProblemSection() {
+  const { t } = useLanguage();
+
+  const FRAGMENTATIONS = [
+    {
+      name: t.problem.card1Name,
+      icon: FileSpreadsheet,
+      label: t.problem.card1Label,
+      detail: t.problem.card1Detail,
+    },
+    {
+      name: t.problem.card2Name,
+      icon: FileText,
+      label: t.problem.card2Label,
+      detail: t.problem.card2Detail,
+    },
+    {
+      name: t.problem.card3Name,
+      icon: Mail,
+      label: t.problem.card3Label,
+      detail: t.problem.card3Detail,
+    },
+    {
+      name: t.problem.card4Name,
+      icon: MessageSquare,
+      label: t.problem.card4Label,
+      detail: t.problem.card4Detail,
+    },
+    {
+      name: t.problem.card5Name,
+      icon: PhoneCall,
+      label: t.problem.card5Label,
+      detail: t.problem.card5Detail,
+    },
+    {
+      name: t.problem.card6Name,
+      icon: GitCompare,
+      label: t.problem.card6Label,
+      detail: t.problem.card6Detail,
+    },
+  ];
+
   return (
     <section className="bg-[#F8FAFC] py-20 lg:py-28 border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,14 +63,13 @@ export default function ProblemSection() {
         <div className="max-w-3xl mb-14">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[6px] bg-red-50 border border-red-200 text-xs font-semibold text-red-700 tracking-wide mb-4">
             <AlertCircle className="w-3.5 h-3.5" />
-            <span>THE INDUSTRY BOTTLENECK</span>
+            <span>{t.problem.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight leading-tight">
-            Construction procurement is fragmented.
+            {t.problem.headline}
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
-            Multi-million dollar projects are routinely coordinated across disjointed consumer tools. 
-            Estimators spend weeks manually extracting data instead of evaluating commercial risk.
+            {t.problem.subheadline}
           </p>
         </div>
 
@@ -104,20 +108,20 @@ export default function ProblemSection() {
         <div className="mt-12 bg-[#0B1220] rounded-[14px] p-8 sm:p-10 border border-[#1C2636] text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md">
           <div className="max-w-2xl">
             <div className="text-xs font-mono text-[#0EA5E9] tracking-wider uppercase mb-2">
-              THE BYLDORA PARADIGM
+              {t.problem.bannerTag}
             </div>
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white leading-snug">
-              BYLDORA turns fragmented procurement into structured intelligence.
+              {t.problem.bannerHeadline}
             </div>
             <p className="text-sm text-slate-400 mt-2">
-              Ingest any format, reconcile specifications, calculate true landed economics, and execute procurement with absolute confidence.
+              {t.problem.bannerDesc}
             </p>
           </div>
           <a
             href="#how-it-works"
             className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-[8px] bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-sm font-semibold transition-colors"
           >
-            <span>Explore The Workflow</span>
+            <span>{t.problem.bannerCta}</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

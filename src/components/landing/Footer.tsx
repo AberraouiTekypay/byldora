@@ -1,7 +1,12 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/lib/languageContext';
 
 export default function Footer() {
+  const { language, t } = useLanguage();
+
   return (
     <footer className="bg-[#0B1220] text-slate-400 border-t border-[#1C2636] pt-16 pb-12 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,13 +25,13 @@ export default function Footer() {
                   BYLDORA
                 </span>
                 <span className="text-[10px] tracking-wider text-slate-400 uppercase font-medium">
-                  Construction Procurement Intelligence
+                  {t.footer.tagline}
                 </span>
               </div>
             </Link>
             
             <p className="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">
-              BYLDORA transforms unstructured construction bills of quantities and complex project specifications into standardized RFQs, comparable supplier bids, and auditable procurement decisions.
+              {t.footer.desc}
             </p>
 
             <div className="flex items-center gap-4 text-xs font-mono text-slate-500 pt-1">
@@ -41,32 +46,32 @@ export default function Footer() {
           {/* Product Links */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider">
-              Product
+              {t.footer.product}
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="#value-strip" className="hover:text-white transition-colors">
-                  BOQ Intelligence
+                  {language === 'fr' ? 'Intelligence BPDE / BOQ' : 'BOQ Intelligence'}
                 </Link>
               </li>
               <li>
                 <Link href="#how-it-works" className="hover:text-white transition-colors">
-                  RFQ Dissemination
+                  {language === 'fr' ? 'Diffusion des Appels d’Offres' : 'RFQ Dissemination'}
                 </Link>
               </li>
               <li>
                 <Link href="#product-visualization" className="hover:text-white transition-colors">
-                  Bid Comparison Matrix
+                  {language === 'fr' ? 'Matrice Comparative des Devis' : 'Bid Comparison Matrix'}
                 </Link>
               </li>
               <li>
                 <Link href="#bid-intelligence" className="hover:text-white transition-colors">
-                  AI Normalization Engine
+                  {language === 'fr' ? 'Moteur de Normalisation IA' : 'AI Normalization Engine'}
                 </Link>
               </li>
               <li>
                 <Link href="/dashboard" className="hover:text-white transition-colors">
-                  Purchase Order Studio
+                  {language === 'fr' ? 'Édition des Bons de Commande' : 'Purchase Order Studio'}
                 </Link>
               </li>
             </ul>
@@ -75,22 +80,22 @@ export default function Footer() {
           {/* Company Links & Contact */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider">
-              Company
+              {t.footer.company}
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="#construction-native" className="hover:text-white transition-colors">
-                  About BYLDORA
+                  {language === 'fr' ? 'À Propos de BYLDORA' : 'About BYLDORA'}
                 </Link>
               </li>
               <li>
                 <Link href="#future-finance" className="hover:text-white transition-colors">
-                  Infrastructure Roadmap
+                  {language === 'fr' ? 'Feuille de Route Infrastructure' : 'Infrastructure Roadmap'}
                 </Link>
               </li>
               <li>
                 <Link href="#value-strip" className="hover:text-white transition-colors">
-                  Enterprise Security
+                  {language === 'fr' ? 'Sécurité Entreprise' : 'Enterprise Security'}
                 </Link>
               </li>
               <li>
@@ -109,22 +114,22 @@ export default function Footer() {
           {/* Legal Links & Social */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono font-bold text-white uppercase tracking-wider">
-              Legal &amp; Connect
+              {t.footer.legal}
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/auth" className="hover:text-white transition-colors">
-                  Privacy Policy
+                  {language === 'fr' ? 'Politique de Confidentialité' : 'Privacy Policy'}
                 </Link>
               </li>
               <li>
                 <Link href="/auth" className="hover:text-white transition-colors">
-                  Terms of Service
+                  {language === 'fr' ? 'Conditions d’Utilisation' : 'Terms of Service'}
                 </Link>
               </li>
               <li>
                 <Link href="/auth" className="hover:text-white transition-colors">
-                  Commercial Contracting Data
+                  {language === 'fr' ? 'Données Contractuelles BTP' : 'Commercial Contracting Data'}
                 </Link>
               </li>
               <li>
@@ -133,7 +138,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <a href="https://github.com/AberraouiTekypay/byldora" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   GitHub Enterprise
                 </a>
               </li>
@@ -142,15 +147,24 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar: Copyright & Exact Required Attribution */}
+        {/* Bottom Bar: Copyright & Exact Required Attribution with clickable Link */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <div className="text-slate-500">
-            &copy; {new Date().getFullYear()} BYLDORA Technologies. All rights reserved.
+            &copy; {new Date().getFullYear()} BYLDORA Technologies. {t.footer.rights}
           </div>
 
-          {/* Exact Required Footer Attribution: An EM300.co Company */}
+          {/* Exact Required Footer Attribution with EM300.co as a link */}
           <div className="text-slate-400 font-medium tracking-wide">
-            An EM300.co Company
+            An{' '}
+            <a
+              href="https://em300.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-white underline decoration-slate-600 underline-offset-2 transition-colors font-semibold"
+            >
+              EM300.co
+            </a>{' '}
+            Company
           </div>
 
           <div className="text-slate-500 text-[11px] font-mono">

@@ -233,7 +233,9 @@ export default function DashboardLayout({
         {/* Subtle Dashboard Footer */}
         <footer className="px-8 py-4 border-t border-[#E2E8F0] bg-white text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
           <div>BYLDORA Construction Procurement Intelligence &bull; Production Workspace</div>
-          <div className="text-slate-400 font-medium">An EM300.co Company</div>
+          <div className="text-slate-400 font-medium">
+            An <a href="https://em300.co" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-slate-900 underline underline-offset-2 transition-colors font-semibold">EM300.co</a> Company
+          </div>
         </footer>
 
       </div>

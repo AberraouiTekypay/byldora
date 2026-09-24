@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { 
   UploadCloud, 
@@ -7,59 +9,62 @@ import {
   Cpu, 
   FileCheck2 
 } from 'lucide-react';
-
-const STEPS = [
-  {
-    step: '01',
-    title: 'Upload BOQ',
-    action: 'Ingest & Standardize',
-    desc: 'Upload multi-tab Excel workbooks, civil schedules, or PDF bill sheets. BYLDORA’s parser extracts line items, quantities, units, and technical specifications into a structured database.',
-    icon: UploadCloud,
-    meta: 'Supports Excel, CSV, PDF schedules',
-  },
-  {
-    step: '02',
-    title: 'Create procurement packages',
-    action: 'Scope & Bundle',
-    desc: 'Group thousands of raw items into clean commercial trade packages (e.g. Structural Steel, MEP Chillers, Facades) with target budgets and milestone delivery requirements.',
-    icon: PackagePlus,
-    meta: 'Automated CSI / Uniclass grouping',
-  },
-  {
-    step: '03',
-    title: 'Issue RFQs',
-    action: 'Multi-Channel Dispatch',
-    desc: 'Distribute structured tender packages to pre-qualified regional vendors with clear submission deadlines, terms, and technical acceptance criteria.',
-    icon: SendHorizontal,
-    meta: 'Dispatched via Portal, Email, or WhatsApp',
-  },
-  {
-    step: '04',
-    title: 'Receive supplier quotations',
-    action: 'Omni-Format Intake',
-    desc: 'Suppliers quote using whatever format they prefer: our interactive portal, marked-up Excel files, or PDF attachments sent over email or messaging.',
-    icon: Inbox,
-    meta: 'Zero barrier to regional supplier entry',
-  },
-  {
-    step: '05',
-    title: 'AI normalizes bids',
-    action: 'True Economic Reconciliation',
-    desc: 'The intelligence engine identifies hidden exclusions (e.g. omitted freight or crane hire), flags unapproved material substitutions, and normalizes payment terms to a single comparative baseline.',
-    icon: Cpu,
-    meta: 'Specification matching & landed cost model',
-  },
-  {
-    step: '06',
-    title: 'Award and generate PO',
-    action: 'Executable Procurement',
-    desc: 'Select the optimal commercial offer with defensible audit trails, produce contract-ready Purchase Orders with standard retention clauses, and lock in commitments.',
-    icon: FileCheck2,
-    meta: 'Instant binding PO generation with PDF export',
-  },
-];
+import { useLanguage } from '@/lib/languageContext';
 
 export default function HowItWorksSection() {
+  const { t } = useLanguage();
+
+  const STEPS = [
+    {
+      step: t.howItWorks.step1Number,
+      title: t.howItWorks.step1Title,
+      action: t.howItWorks.step1Action,
+      desc: t.howItWorks.step1Desc,
+      icon: UploadCloud,
+      meta: t.howItWorks.step1Meta,
+    },
+    {
+      step: t.howItWorks.step2Number,
+      title: t.howItWorks.step2Title,
+      action: t.howItWorks.step2Action,
+      desc: t.howItWorks.step2Desc,
+      icon: PackagePlus,
+      meta: t.howItWorks.step2Meta,
+    },
+    {
+      step: t.howItWorks.step3Number,
+      title: t.howItWorks.step3Title,
+      action: t.howItWorks.step3Action,
+      desc: t.howItWorks.step3Desc,
+      icon: SendHorizontal,
+      meta: t.howItWorks.step3Meta,
+    },
+    {
+      step: t.howItWorks.step4Number,
+      title: t.howItWorks.step4Title,
+      action: t.howItWorks.step4Action,
+      desc: t.howItWorks.step4Desc,
+      icon: Inbox,
+      meta: t.howItWorks.step4Meta,
+    },
+    {
+      step: t.howItWorks.step5Number,
+      title: t.howItWorks.step5Title,
+      action: t.howItWorks.step5Action,
+      desc: t.howItWorks.step5Desc,
+      icon: Cpu,
+      meta: t.howItWorks.step5Meta,
+    },
+    {
+      step: t.howItWorks.step6Number,
+      title: t.howItWorks.step6Title,
+      action: t.howItWorks.step6Action,
+      desc: t.howItWorks.step6Desc,
+      icon: FileCheck2,
+      meta: t.howItWorks.step6Meta,
+    },
+  ];
+
   return (
     <section id="how-it-works" className="bg-white py-20 lg:py-28 border-b border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,13 +72,13 @@ export default function HowItWorksSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[6px] bg-blue-50 border border-blue-200 text-xs font-semibold text-[#2563EB] tracking-wide mb-3">
-            <span>PROCUREMENT LIFECYCLE</span>
+            <span>{t.howItWorks.tag}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
-            How BYLDORA works
+            {t.howItWorks.headline}
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
-            From initial bill of quantities to finalized purchase orders in six auditable, data-driven steps.
+            {t.howItWorks.subheadline}
           </p>
         </div>
 
