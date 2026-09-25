@@ -67,7 +67,7 @@ export default function EmergingMarketSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-14">
+        <div className="max-w-3xl mb-12">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[6px] bg-sky-50 border border-sky-200 text-xs font-semibold text-[#0EA5E9] tracking-wide mb-3">
             <Zap className="w-3.5 h-3.5" />
             <span>{t.emerging.tag}</span>
@@ -78,6 +78,66 @@ export default function EmergingMarketSection() {
           <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
             {t.emerging.subheadline}
           </p>
+        </div>
+
+        {/* Featured Visual: On-Site Executive & Regional Trades Collaboration */}
+        <div className="mb-14 bg-[#0B1220] rounded-[16px] border border-[#1C2636] p-6 sm:p-8 lg:p-10 shadow-xl overflow-hidden relative text-white">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-7 relative rounded-[12px] overflow-hidden border border-[#2A384C] shadow-2xl group">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/market-trades.jpg"
+                alt="Executive Procurement Team and Quantity Surveyors at Casablanca Commercial Construction Site"
+                className="w-full h-auto object-cover object-center group-hover:scale-102 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/80 via-transparent to-transparent pointer-events-none" />
+              
+              <div className="absolute top-4 left-4 bg-[#0B1220]/90 backdrop-blur-md border border-[#0EA5E9]/60 rounded-[8px] px-3 py-1.5 text-xs text-white font-mono flex items-center gap-2 shadow-lg">
+                <span className="w-2 h-2 rounded-full bg-[#0EA5E9] animate-pulse" />
+                <span>CASABLANCA &amp; REGIONAL CAPITAL SITES</span>
+              </div>
+
+              <div className="absolute bottom-4 left-4 right-4 bg-[#0B1220]/90 backdrop-blur-md border border-white/20 rounded-[8px] p-3 text-xs text-slate-300 font-sans flex items-center justify-between shadow-lg">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                  <span className="font-semibold text-white">High Local Adoption:</span>
+                  <span className="hidden sm:inline">Suppliers quote without complex software training</span>
+                </div>
+                <span className="font-mono text-emerald-400 font-bold">99.4% Quote Yield</span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 space-y-5">
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#1C2636] border border-slate-700 font-mono text-[11px] text-[#0EA5E9]">
+                <span>OMNICHANNEL TENDER INGESTION</span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
+                Built for how suppliers actually do business.
+              </h3>
+
+              <p className="text-sm text-slate-300 leading-relaxed">
+                In rapidly growing markets across North Africa, the Middle East, and Southern Europe, demanding that local trade subcontractors create logins for foreign procurement portals results in zero bids. BYLDORA meets suppliers where they work.
+              </p>
+
+              <div className="space-y-2.5 pt-2 text-xs font-mono text-slate-300">
+                <div className="flex items-center gap-2 p-2.5 bg-[#1C2636] rounded-[6px] border border-slate-700">
+                  <span className="text-emerald-400 font-bold">WhatsApp:</span>
+                  <span>Voice memos &amp; quote photos parsed in 4 seconds</span>
+                </div>
+                <div className="flex items-center gap-2 p-2.5 bg-[#1C2636] rounded-[6px] border border-slate-700">
+                  <span className="text-blue-400 font-bold">Excel:</span>
+                  <span>Offline rate entry without formula breakage</span>
+                </div>
+                <div className="flex items-center gap-2 p-2.5 bg-[#1C2636] rounded-[6px] border border-slate-700">
+                  <span className="text-cyan-400 font-bold">PDF OCR:</span>
+                  <span>Stamped signed devis extracted to unit lines</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         {/* 4 Pragmatic Channels */}

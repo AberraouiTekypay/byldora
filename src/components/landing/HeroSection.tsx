@@ -10,6 +10,18 @@ export default function HeroSection() {
 
   return (
     <section className="relative bg-[#0B1220] text-white pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden border-b border-[#1C2636]">
+      {/* Background Architectural Photography with Twilight Gradient Mask */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/hero-tower.jpg"
+          alt="High-Rise Commercial Construction Tower"
+          className="w-full h-full object-cover object-center opacity-25 scale-105 transform motion-safe:transition-transform motion-safe:duration-1000"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1220]/80 via-[#0B1220]/95 to-[#0B1220]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(37,99,235,0.25),rgba(255,255,255,0))]" />
+      </div>
+
       {/* Subtle background technical grid */}
       <div 
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -19,10 +31,10 @@ export default function HeroSection() {
         }}
       />
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
           {/* Subtle enterprise status pill */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[8px] bg-[#1C2636] border border-[#2A384C] text-xs font-mono text-slate-300 mb-8 tracking-wide">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[8px] bg-[#1C2636]/90 backdrop-blur-md border border-[#2A384C] text-xs font-mono text-slate-300 mb-8 tracking-wide shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#0EA5E9] animate-pulse"></span>
             <span>{t.hero.engineTag}</span>
           </div>
@@ -34,7 +46,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal mb-10">
+          <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal mb-8">
             {t.hero.subheadline}
           </p>
 
@@ -49,10 +61,40 @@ export default function HeroSection() {
             </Link>
             <a
               href="#how-it-works"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-semibold text-slate-200 bg-[#1C2636]/60 hover:bg-[#1C2636] border border-slate-700/80 hover:border-slate-500 rounded-[8px] transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-semibold text-slate-200 bg-[#1C2636]/80 hover:bg-[#1C2636] border border-slate-700/80 hover:border-slate-500 rounded-[8px] transition-colors"
             >
               <span>{t.hero.secondaryCta}</span>
             </a>
+            <Link
+              href="/auth"
+              className="text-xs font-mono text-slate-400 hover:text-white transition-colors underline decoration-slate-600 underline-offset-4 py-2"
+            >
+              Demo Personas (CPO / Estimator / Supplier) &rarr;
+            </Link>
+          </div>
+
+          {/* Key Procurement Infrastructure Metrics */}
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left">
+            <div className="bg-[#1C2636]/80 backdrop-blur-md border border-[#2A384C] rounded-[10px] p-3.5 shadow-sm">
+              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Active Capital</div>
+              <div className="text-xl sm:text-2xl font-black text-white font-mono mt-0.5">MAD 82.4M</div>
+              <div className="text-[11px] text-blue-400 mt-1 flex items-center gap-1">● 14 Tenders Active</div>
+            </div>
+            <div className="bg-[#1C2636]/80 backdrop-blur-md border border-[#2A384C] rounded-[10px] p-3.5 shadow-sm">
+              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">BOQ Line Items</div>
+              <div className="text-xl sm:text-2xl font-black text-white font-mono mt-0.5">2,481</div>
+              <div className="text-[11px] text-emerald-400 mt-1 flex items-center gap-1">✓ Automated Parsing</div>
+            </div>
+            <div className="bg-[#1C2636]/80 backdrop-blur-md border border-[#2A384C] rounded-[10px] p-3.5 shadow-sm">
+              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Long-Lead Items</div>
+              <div className="text-xl sm:text-2xl font-black text-white font-mono mt-0.5">14–26 Wks</div>
+              <div className="text-[11px] text-amber-400 mt-1 flex items-center gap-1">⚠ Critical Path Sync</div>
+            </div>
+            <div className="bg-[#1C2636]/80 backdrop-blur-md border border-[#2A384C] rounded-[10px] p-3.5 shadow-sm">
+              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">Landed Cost Model</div>
+              <div className="text-xl sm:text-2xl font-black text-white font-mono mt-0.5">100%</div>
+              <div className="text-[11px] text-cyan-400 mt-1 flex items-center gap-1">★ Apples-to-Apples</div>
+            </div>
           </div>
         </div>
 
@@ -87,13 +129,16 @@ export default function HeroSection() {
               <div className="grid grid-cols-1 md:grid-cols-6 gap-3 lg:gap-4 relative">
                 
                 {/* 1. PROJECT */}
-                <div className="bg-[#1C2636] border border-[#2A384C] rounded-[10px] p-4 flex flex-col justify-between hover:border-slate-500 transition-colors">
+                <Link 
+                  href="/dashboard/projects"
+                  className="bg-[#1C2636] border border-[#2A384C] rounded-[10px] p-4 flex flex-col justify-between hover:border-[#2563EB] hover:bg-[#1E2B3E] transition-all group cursor-pointer"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">{t.hero.step1Title}</span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 group-hover:text-blue-300">{t.hero.step1Title}</span>
                       <Layers className="w-3.5 h-3.5 text-[#0EA5E9]" />
                     </div>
-                    <div className="font-semibold text-sm text-white line-clamp-1">
+                    <div className="font-semibold text-sm text-white line-clamp-1 group-hover:text-blue-200">
                       {t.hero.step1Name}
                     </div>
                   </div>
@@ -101,7 +146,7 @@ export default function HeroSection() {
                     <div className="text-xs text-slate-400">{t.hero.step1BudgetLabel}</div>
                     <div className="text-base font-bold text-white font-mono">{t.hero.step1BudgetValue}</div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Connector Arrow for mobile */}
                 <div className="flex md:hidden justify-center text-slate-500">
@@ -109,13 +154,16 @@ export default function HeroSection() {
                 </div>
 
                 {/* 2. BOQ */}
-                <div className="bg-[#1C2636] border border-[#2A384C] rounded-[10px] p-4 flex flex-col justify-between hover:border-slate-500 transition-colors">
+                <Link
+                  href="/dashboard/boq"
+                  className="bg-[#1C2636] border border-[#2A384C] rounded-[10px] p-4 flex flex-col justify-between hover:border-[#2563EB] hover:bg-[#1E2B3E] transition-all group cursor-pointer"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">{t.hero.step2Title}</span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 group-hover:text-blue-300">{t.hero.step2Title}</span>
                       <FileSpreadsheet className="w-3.5 h-3.5 text-[#0EA5E9]" />
                     </div>
-                    <div className="font-semibold text-sm text-white">
+                    <div className="font-semibold text-sm text-white group-hover:text-blue-200">
                       {t.hero.step2Name}
                     </div>
                   </div>
@@ -123,7 +171,7 @@ export default function HeroSection() {
                     <div className="text-xs text-slate-400">{t.hero.step2CountLabel}</div>
                     <div className="text-base font-bold text-white font-mono">{t.hero.step2CountValue}</div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Connector Arrow for mobile */}
                 <div className="flex md:hidden justify-center text-slate-500">
@@ -131,13 +179,16 @@ export default function HeroSection() {
                 </div>
 
                 {/* 3. PROCUREMENT PACKAGES */}
-                <div className="bg-[#1C2636] border border-[#2A384C] rounded-[10px] p-4 flex flex-col justify-between hover:border-slate-500 transition-colors">
+                <Link
+                  href="/dashboard/rfq"
+                  className="bg-[#1C2636] border border-[#2A384C] rounded-[10px] p-4 flex flex-col justify-between hover:border-[#2563EB] hover:bg-[#1E2B3E] transition-all group cursor-pointer"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">{t.hero.step3Title}</span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 group-hover:text-blue-300">{t.hero.step3Title}</span>
                       <Layers className="w-3.5 h-3.5 text-[#0EA5E9]" />
                     </div>
-                    <div className="font-semibold text-sm text-white">
+                    <div className="font-semibold text-sm text-white group-hover:text-blue-200">
                       {t.hero.step3Name}
                     </div>
                   </div>
@@ -145,7 +196,7 @@ export default function HeroSection() {
                     <div className="text-xs text-slate-400">{t.hero.step3CountLabel}</div>
                     <div className="text-base font-bold text-white font-mono">{t.hero.step3CountValue}</div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Connector Arrow for mobile */}
                 <div className="flex md:hidden justify-center text-slate-500">
@@ -153,13 +204,16 @@ export default function HeroSection() {
                 </div>
 
                 {/* 4. RFQ */}
-                <div className="bg-[#1C2636] border border-[#2A384C] rounded-[10px] p-4 flex flex-col justify-between hover:border-slate-500 transition-colors">
+                <Link
+                  href="/dashboard/supplier-portal"
+                  className="bg-[#1C2636] border border-[#2A384C] rounded-[10px] p-4 flex flex-col justify-between hover:border-[#2563EB] hover:bg-[#1E2B3E] transition-all group cursor-pointer"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400">{t.hero.step4Title}</span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 group-hover:text-blue-300">{t.hero.step4Title}</span>
                       <Send className="w-3.5 h-3.5 text-[#0EA5E9]" />
                     </div>
-                    <div className="font-semibold text-sm text-white">
+                    <div className="font-semibold text-sm text-white group-hover:text-blue-200">
                       {t.hero.step4Name}
                     </div>
                   </div>
@@ -167,7 +221,7 @@ export default function HeroSection() {
                     <div className="text-xs text-slate-400">{t.hero.step4CountLabel}</div>
                     <div className="text-base font-bold text-white font-mono">{t.hero.step4CountValue}</div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Connector Arrow for mobile */}
                 <div className="flex md:hidden justify-center text-slate-500">
@@ -175,13 +229,16 @@ export default function HeroSection() {
                 </div>
 
                 {/* 5. BID INTELLIGENCE */}
-                <div className="bg-[#1C2636] border border-[#2563EB]/60 rounded-[10px] p-4 flex flex-col justify-between ring-1 ring-[#2563EB]/40 bg-gradient-to-b from-[#1C2636] to-[#172338]">
+                <Link
+                  href="/dashboard/bids"
+                  className="bg-[#1C2636] border border-[#2563EB]/60 rounded-[10px] p-4 flex flex-col justify-between ring-1 ring-[#2563EB]/40 bg-gradient-to-b from-[#1C2636] to-[#172338] hover:border-[#0EA5E9] hover:shadow-lg transition-all group cursor-pointer"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-[#0EA5E9]">{t.hero.step5Title}</span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-[#0EA5E9] group-hover:text-white">{t.hero.step5Title}</span>
                       <Cpu className="w-3.5 h-3.5 text-[#0EA5E9]" />
                     </div>
-                    <div className="font-semibold text-sm text-white">
+                    <div className="font-semibold text-sm text-white group-hover:text-cyan-200">
                       {t.hero.step5Name}
                     </div>
                   </div>
@@ -189,7 +246,7 @@ export default function HeroSection() {
                     <div className="text-xs text-slate-400">{t.hero.step5CountLabel}</div>
                     <div className="text-base font-bold text-[#0EA5E9] font-mono">{t.hero.step5CountValue}</div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Connector Arrow for mobile */}
                 <div className="flex md:hidden justify-center text-slate-500">
@@ -197,13 +254,16 @@ export default function HeroSection() {
                 </div>
 
                 {/* 6. AWARD */}
-                <div className="bg-[#0F1E38] border border-[#2563EB] rounded-[10px] p-4 flex flex-col justify-between shadow-lg">
+                <Link
+                  href="/dashboard/award"
+                  className="bg-[#0F1E38] border border-[#2563EB] rounded-[10px] p-4 flex flex-col justify-between shadow-lg hover:border-green-400 transition-all group cursor-pointer"
+                >
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-green-400">{t.hero.step6Title}</span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-green-400 group-hover:text-green-300">{t.hero.step6Title}</span>
                       <Award className="w-3.5 h-3.5 text-[#16A34A]" />
                     </div>
-                    <div className="font-semibold text-sm text-white">
+                    <div className="font-semibold text-sm text-white group-hover:text-green-100">
                       {t.hero.step6Name}
                     </div>
                   </div>
@@ -211,7 +271,7 @@ export default function HeroSection() {
                     <div className="text-xs text-slate-300">{t.hero.step6CountLabel}</div>
                     <div className="text-base font-bold text-white font-mono text-[#16A34A]">{t.hero.step6CountValue}</div>
                   </div>
-                </div>
+                </Link>
 
               </div>
 

@@ -16,7 +16,48 @@ export const INITIAL_PROJECT: Project = {
   completionDate: 'Q4 2027',
   leadConsultant: 'Atelier K+A Architecture & Engineering',
   createdAt: '2026-02-15',
+  image: '/images/hero-tower.jpg',
 };
+
+export const INITIAL_PROJECTS: Project[] = [
+  INITIAL_PROJECT,
+  {
+    id: 'proj-casablanca-02',
+    code: 'PRJ-CFC-2026',
+    name: 'Tour Casablanca Finance City',
+    location: 'Casablanca Finance City (CFC), Morocco',
+    budgetMAD: 145000000, // MAD 145M
+    spentMAD: 62800000,
+    currency: 'MAD',
+    status: 'in_execution',
+    totalBoqItems: 4120,
+    packagesCount: 36,
+    rfqsCount: 28,
+    awardedCount: 22,
+    completionDate: 'Q2 2028',
+    leadConsultant: 'Foster + Partners / BTP Ingénierie Maroc',
+    createdAt: '2025-11-10',
+    image: '/images/market-trades.jpg',
+  },
+  {
+    id: 'proj-tangier-03',
+    code: 'PRJ-TMP-2026',
+    name: 'Tangier Med Logistics Hub',
+    location: 'Tangier Automotive City & Port Zone, Morocco',
+    budgetMAD: 68500000, // MAD 68.5M
+    spentMAD: 19400000,
+    currency: 'MAD',
+    status: 'tender_active',
+    totalBoqItems: 1850,
+    packagesCount: 19,
+    rfqsCount: 16,
+    awardedCount: 6,
+    completionDate: 'Q1 2027',
+    leadConsultant: 'Tanger Port Authority Engineering',
+    createdAt: '2026-01-20',
+    image: '/images/site-inspection.jpg',
+  },
+];
 
 export const SAMPLE_BOQ_ITEMS: BoqItem[] = [
   {

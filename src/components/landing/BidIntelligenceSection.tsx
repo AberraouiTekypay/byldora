@@ -149,6 +149,63 @@ export default function BidIntelligenceSection() {
 
         </div>
 
+        {/* Visual Economic Reconciliation Breakdown Bar */}
+        <div className="mb-12 bg-slate-50 border border-slate-200 rounded-[14px] p-6 sm:p-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <div className="text-[11px] font-mono uppercase tracking-wider text-[#2563EB] font-bold">
+                ECONOMIC RECONCILIATION SUMMARY
+              </div>
+              <h3 className="text-xl font-bold text-[#0F172A] mt-0.5">
+                The Optical Illusion: Why Headline Lowest ≠ Best Landed Cost
+              </h3>
+            </div>
+            <a
+              href="/dashboard/bids"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#2563EB] hover:text-[#1D4ED8]"
+            >
+              <span>Explore Live Studio</span>
+              <span className="font-mono">&rarr;</span>
+            </a>
+          </div>
+
+          <div className="space-y-4">
+            {/* Supplier B */}
+            <div>
+              <div className="flex items-center justify-between text-xs font-mono mb-1.5">
+                <span className="font-semibold text-slate-700">Maghreb Clim (Apparent Lowest): MAD 2,270,000</span>
+                <span className="font-bold text-rose-600">+MAD 185,000 Unquoted Scope = MAD 2,455,000</span>
+              </div>
+              <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden flex">
+                <div className="bg-amber-500 h-full" style={{ width: '92.5%' }} />
+                <div className="bg-rose-500 h-full" style={{ width: '7.5%' }} title="Omitted Freight + Crane Hoisting" />
+              </div>
+            </div>
+
+            {/* Supplier A (Winner) */}
+            <div>
+              <div className="flex items-center justify-between text-xs font-mono mb-1.5">
+                <span className="font-semibold text-emerald-800">Atlas Clim (Verified Winner): MAD 2,410,000</span>
+                <span className="font-bold text-emerald-700">✓ All-Inclusive Landed: MAD 2,410,000 (Saves MAD 45k)</span>
+              </div>
+              <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden flex">
+                <div className="bg-emerald-500 h-full" style={{ width: '98%' }} />
+              </div>
+            </div>
+
+            {/* Supplier C */}
+            <div>
+              <div className="flex items-center justify-between text-xs font-mono mb-1.5">
+                <span className="font-semibold text-slate-600">Sahara Thermal (Credit Advantage): MAD 2,490,000</span>
+                <span className="font-bold text-blue-600">-MAD 28,000 Working Capital Credit = MAD 2,462,000</span>
+              </div>
+              <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden flex">
+                <div className="bg-blue-500 h-full" style={{ width: '100%' }} />
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* The Exact Required Blockquote Statement */}
         <div className="bg-[#0B1220] border-l-4 border-[#2563EB] p-8 sm:p-10 rounded-r-[12px] text-white">
           <div className="text-xs font-mono text-[#0EA5E9] tracking-wider uppercase mb-2">

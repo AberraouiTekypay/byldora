@@ -12,6 +12,7 @@ import {
 } from '@/types/procurement';
 import {
   INITIAL_PROJECT,
+  INITIAL_PROJECTS,
   SAMPLE_BOQ_ITEMS,
   INITIAL_PACKAGES,
   INITIAL_BIDS_PKG04,
@@ -29,7 +30,7 @@ const DEFAULT_USER: UserSession = {
 export function useProcurementStore() {
   const [mounted, setMounted] = useState(false);
   const [user, setUser] = useState<UserSession>(DEFAULT_USER);
-  const [projects, setProjects] = useState<Project[]>([INITIAL_PROJECT]);
+  const [projects, setProjects] = useState<Project[]>(INITIAL_PROJECTS);
   const [activeProjectId, setActiveProjectId] = useState<string>(INITIAL_PROJECT.id);
   const [boqItems, setBoqItems] = useState<BoqItem[]>(SAMPLE_BOQ_ITEMS);
   const [packages, setPackages] = useState<RfqPackage[]>(INITIAL_PACKAGES);

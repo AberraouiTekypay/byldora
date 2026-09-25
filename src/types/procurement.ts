@@ -14,6 +14,7 @@ export interface Project {
   completionDate: string;
   leadConsultant: string;
   createdAt: string;
+  image?: string;
 }
 
 export interface BoqItem {
