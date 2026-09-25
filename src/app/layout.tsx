@@ -10,35 +10,35 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "BYLDORA — Construction Procurement Intelligence",
+  title: "BYLDORA | Construction Procurement Intelligence",
   description:
-    "BYLDORA transforms construction BOQs and project requirements into intelligent RFQs, supplier bids and procurement decisions.",
+    "BYLDORA transforme les BOQ et besoins de projets de construction en consultations structurées, comparatifs intelligents et décisions d'achat documentées. An EM300.co Company.",
   keywords: [
     "construction procurement",
-    "construction RFQ",
-    "construction RFP",
+    "maîtrise d'ouvrage",
+    "intelligence achats BTP",
+    "appels d'offres construction",
+    "comparatif devis BTP",
     "BOQ procurement",
-    "construction suppliers",
-    "construction procurement software",
-    "construction bid comparison",
-    "tender management",
-    "bill of quantities",
-    "procurement intelligence",
+    "DQE BTP",
+    "CCTP conformité",
+    "construction procurement intelligence",
+    "EM300",
   ],
-  authors: [{ name: "BYLDORA" }],
+  authors: [{ name: "BYLDORA Technologies — EM300.co" }],
   openGraph: {
-    title: "BYLDORA — Construction Procurement Intelligence",
+    title: "BYLDORA | Construction Procurement Intelligence",
     description:
-      "Turn BOQs and project requirements into structured RFQs, comparable supplier bids and executable procurement decisions.",
+      "BYLDORA transforme les BOQ et besoins de projets de construction en consultations structurées, comparatifs intelligents et décisions d'achat documentées.",
     siteName: "BYLDORA",
     type: "website",
-    locale: "en_US",
+    locale: "fr_FR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BYLDORA — Construction Procurement Intelligence",
+    title: "BYLDORA | Construction Procurement Intelligence",
     description:
-      "Turn BOQs and project requirements into structured RFQs, comparable supplier bids and executable procurement decisions.",
+      "BYLDORA transforme les BOQ et besoins de projets de construction en consultations structurées, comparatifs intelligents et décisions d'achat documentées.",
   },
   icons: {
     icon: "/favicon.ico",
