@@ -203,9 +203,29 @@ export default function ProductShowcaseSection() {
           {/* Tab 4: Bid Intelligence */}
           {activeTab === 'bid' && (
             <div className="p-6">
-              <div className="mb-4 pb-2 border-b border-[#E5E4DE] flex items-center justify-between">
-                <h4 className="font-bold text-base text-[#111827]">Matrice Comparative des Devis Réconciliés</h4>
-                <span className="text-xs font-mono text-[#506A85]">3 Offres Normalisées</span>
+              <div className="mb-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center bg-[#FAF9F6] border border-[#D9DEE7] rounded-[4px] p-4">
+                <div className="lg:col-span-5 relative rounded-[3px] overflow-hidden border border-[#D9DEE7] group shadow-xs">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/bim-matrix.jpg"
+                    alt="BIM Wireframe Skyscraper Facade and Parametric Calculations"
+                    className="w-full h-auto object-cover object-center group-hover:scale-102 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-2 left-2 bg-white/95 px-2 py-0.5 rounded-[2px] border border-[#D9DEE7] text-[10px] font-mono text-[#2457D6] font-bold">
+                    BIM NIVEAU 38 • EUROCODES 1 &amp; 9
+                  </div>
+                </div>
+                <div className="lg:col-span-7 space-y-2">
+                  <div className="text-[10px] font-mono uppercase text-[#18794E] font-bold">
+                    Vérification Paramétrique des Spécifications
+                  </div>
+                  <h4 className="text-base font-bold text-[#111827]">
+                    Matrice Comparative des Devis Réconciliés au CCTP
+                  </h4>
+                  <p className="text-xs text-[#243244] leading-relaxed">
+                    Le moteur compare les descentes de charges, les coefficients thermiques des vitrages et les exclusions logistiques pour établir l’adjudication objective.
+                  </p>
+                </div>
               </div>
 
               <div className="border border-[#D9DEE7] rounded-[4px] overflow-hidden text-xs font-mono">
@@ -213,27 +233,27 @@ export default function ProductShowcaseSection() {
                   <thead className="bg-[#FAF9F6] text-[#506A85] border-b border-[#D9DEE7]">
                     <tr>
                       <th className="p-3">Critère d’Évaluation</th>
-                      <th className="p-3 bg-[#EFF6FF]/60 text-[#2457D6] font-bold">Fournisseur A (Atlas)</th>
-                      <th className="p-3">Fournisseur B (Maghreb)</th>
-                      <th className="p-3">Fournisseur C (Sahara)</th>
+                      <th className="p-3 bg-[#EFF6FF] text-[#2457D6] font-bold">Fournisseur A (Atlas Clim)</th>
+                      <th className="p-3">Fournisseur B (Maghreb Clim)</th>
+                      <th className="p-3">Fournisseur C (Sahara Thermal)</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#E5E4DE]">
                     <tr>
                       <td className="p-3 font-semibold font-sans">Montant Devis Brut</td>
-                      <td className="p-3 bg-[#EFF6FF]/30 font-bold text-[#111827]">2 410 000 MAD</td>
+                      <td className="p-3 bg-[#EFF6FF]/40 font-bold text-[#111827]">2 410 000 MAD</td>
                       <td className="p-3 text-slate-700">2 270 000 MAD</td>
                       <td className="p-3 text-slate-700">2 490 000 MAD</td>
                     </tr>
                     <tr>
                       <td className="p-3 font-semibold font-sans">Conformité CCTP</td>
-                      <td className="p-3 bg-[#EFF6FF]/30 text-[#18794E] font-bold">100% Conforme</td>
+                      <td className="p-3 bg-[#EFF6FF]/40 text-[#18794E] font-bold">100% Conforme</td>
                       <td className="p-3 text-[#B7791F]">92% (moteur substitué)</td>
                       <td className="p-3 text-[#18794E]">100% Conforme</td>
                     </tr>
                     <tr>
-                      <td className="p-3 font-semibold font-sans">Fret & Grutage</td>
-                      <td className="p-3 bg-[#EFF6FF]/30 text-[#18794E]">Inclus DAP Chantier</td>
+                      <td className="p-3 font-semibold font-sans">Fret &amp; Grutage</td>
+                      <td className="p-3 bg-[#EFF6FF]/40 text-[#18794E] font-semibold">Inclus DAP Chantier</td>
                       <td className="p-3 text-[#B42318] font-bold">+185 000 MAD non chiffré</td>
                       <td className="p-3 text-[#18794E]">Inclus DAP Chantier</td>
                     </tr>
@@ -241,7 +261,7 @@ export default function ProductShowcaseSection() {
                       <td className="p-3 font-sans text-[#111827]">COÛT RENDU COMPARABLE</td>
                       <td className="p-3 bg-[#EFF6FF] text-[#18794E] text-sm">2 410 000 MAD (Adjugé)</td>
                       <td className="p-3 text-[#B42318] text-sm">2 630 000 MAD</td>
-                      <td className="p-3 text-sm">2 490 000 MAD</td>
+                      <td className="p-3 text-[#2457D6] text-sm">2 490 000 MAD (Traite 90j)</td>
                     </tr>
                   </tbody>
                 </table>

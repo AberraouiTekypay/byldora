@@ -9,11 +9,11 @@ export default function DataMoatSection() {
   const { t } = useLanguage();
 
   const STEPS = [
-    { num: '01', title: t.dataMoat.step1, sub: 'Chantiers réels' },
-    { num: '02', title: t.dataMoat.step2, sub: 'Devis & arbitrages' },
-    { num: '03', title: t.dataMoat.step3, sub: 'Prix unitaires DQE' },
-    { num: '04', title: t.dataMoat.step4, sub: 'Indices de dispersion' },
-    { num: '05', title: t.dataMoat.step5, sub: 'Moindre risque' },
+    { num: '01', title: t.dataMoat.step1, sub: 'Chantiers réels', color: 'border-l-4 border-l-[#2457D6] text-[#2457D6]' },
+    { num: '02', title: t.dataMoat.step2, sub: 'Devis & arbitrages', color: 'border-l-4 border-l-[#506A85] text-[#506A85]' },
+    { num: '03', title: t.dataMoat.step3, sub: 'Prix unitaires DQE', color: 'border-l-4 border-l-[#B66A3C] text-[#B66A3C]' },
+    { num: '04', title: t.dataMoat.step4, sub: 'Indices de dispersion', color: 'border-l-4 border-l-[#B7791F] text-[#B7791F]' },
+    { num: '05', title: t.dataMoat.step5, sub: 'Moindre risque', color: 'border-l-4 border-l-[#18794E] text-[#18794E]' },
   ];
 
   return (
@@ -31,9 +31,9 @@ export default function DataMoatSection() {
           {t.dataMoat.factors.map((factor, idx) => (
             <div
               key={idx}
-              className="bg-[#FAF9F6] border border-[#D9DEE7] rounded-[4px] p-3 text-center"
+              className="bg-[#FAF9F6] border border-[#D9DEE7] rounded-[4px] p-3 text-center hover:border-[#2457D6] transition-colors"
             >
-              <div className="text-[10px] text-[#506A85] mb-1">FACTEUR 0{idx + 1}</div>
+              <div className="text-[10px] text-[#2457D6] font-bold mb-1">FACTEUR 0{idx + 1}</div>
               <div className="font-semibold text-[#111827]">{factor}</div>
             </div>
           ))}
@@ -41,17 +41,18 @@ export default function DataMoatSection() {
 
         {/* Financial Infrastructure Thesis Visual */}
         <div className="bg-[#FAF9F6] border border-[#D9DEE7] rounded-[6px] p-6 sm:p-8">
-          <div className="text-[11px] font-mono text-[#506A85] uppercase tracking-wider mb-6 pb-2 border-b border-[#E5E4DE]">
-            Boucle d’Apprentissage Économique du Secteur BTP
+          <div className="text-[11px] font-mono text-[#506A85] uppercase tracking-wider mb-6 pb-2 border-b border-[#E5E4DE] flex items-center justify-between">
+            <span>Boucle d’Apprentissage Économique du Secteur BTP</span>
+            <span className="text-[#2457D6] font-semibold">Mémoire Immuable des Marchés</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
             {STEPS.map((step, idx) => (
               <div
                 key={idx}
-                className="bg-white border border-[#D9DEE7] rounded-[4px] p-4 text-center relative"
+                className={`bg-white border border-[#D9DEE7] rounded-[4px] p-4 text-center relative shadow-2xs ${step.color}`}
               >
-                <div className="text-[10px] font-mono text-[#2457D6] font-bold mb-1">
+                <div className="text-[10px] font-mono font-bold mb-1">
                   ÉTAPE {step.num}
                 </div>
                 <div className="font-bold text-sm text-[#111827] mb-1">
