@@ -95,44 +95,44 @@ export default function EmergingMarketSection() {
               
               <div className="absolute top-4 left-4 bg-[#0B1220]/90 backdrop-blur-md border border-[#0EA5E9]/60 rounded-[8px] px-3 py-1.5 text-xs text-white font-mono flex items-center gap-2 shadow-lg">
                 <span className="w-2 h-2 rounded-full bg-[#0EA5E9] animate-pulse" />
-                <span>CASABLANCA &amp; REGIONAL CAPITAL SITES</span>
+                <span>{t.emerging.collabSite}</span>
               </div>
 
               <div className="absolute bottom-4 left-4 right-4 bg-[#0B1220]/90 backdrop-blur-md border border-white/20 rounded-[8px] p-3 text-xs text-slate-300 font-sans flex items-center justify-between shadow-lg">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                  <span className="font-semibold text-white">High Local Adoption:</span>
-                  <span className="hidden sm:inline">Suppliers quote without complex software training</span>
+                  <span className="font-semibold text-white">{t.emerging.collabAdoption}</span>
+                  <span className="hidden sm:inline">{t.emerging.collabAdoptionSub}</span>
                 </div>
-                <span className="font-mono text-emerald-400 font-bold">99.4% Quote Yield</span>
+                <span className="font-mono text-emerald-400 font-bold">{t.emerging.collabYield}</span>
               </div>
             </div>
 
             <div className="lg:col-span-5 space-y-5">
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#1C2636] border border-slate-700 font-mono text-[11px] text-[#0EA5E9]">
-                <span>OMNICHANNEL TENDER INGESTION</span>
+                <span>{t.emerging.collabTag}</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
-                Built for how suppliers actually do business.
+                {t.emerging.collabHeadline}
               </h3>
 
               <p className="text-sm text-slate-300 leading-relaxed">
-                In rapidly growing markets across North Africa, the Middle East, and Southern Europe, demanding that local trade subcontractors create logins for foreign procurement portals results in zero bids. BYLDORA meets suppliers where they work.
+                {t.emerging.collabDesc}
               </p>
 
               <div className="space-y-2.5 pt-2 text-xs font-mono text-slate-300">
                 <div className="flex items-center gap-2 p-2.5 bg-[#1C2636] rounded-[6px] border border-slate-700">
-                  <span className="text-emerald-400 font-bold">WhatsApp:</span>
-                  <span>Voice memos &amp; quote photos parsed in 4 seconds</span>
+                  <span className="text-emerald-400 font-bold">●</span>
+                  <span>{t.emerging.collabCh1}</span>
                 </div>
                 <div className="flex items-center gap-2 p-2.5 bg-[#1C2636] rounded-[6px] border border-slate-700">
-                  <span className="text-blue-400 font-bold">Excel:</span>
-                  <span>Offline rate entry without formula breakage</span>
+                  <span className="text-blue-400 font-bold">●</span>
+                  <span>{t.emerging.collabCh2}</span>
                 </div>
                 <div className="flex items-center gap-2 p-2.5 bg-[#1C2636] rounded-[6px] border border-slate-700">
-                  <span className="text-cyan-400 font-bold">PDF OCR:</span>
-                  <span>Stamped signed devis extracted to unit lines</span>
+                  <span className="text-cyan-400 font-bold">●</span>
+                  <span>{t.emerging.collabCh3}</span>
                 </div>
               </div>
             </div>

@@ -14,7 +14,7 @@ import {
 import { useLanguage } from '@/lib/languageContext';
 
 export default function ProblemSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const FRAGMENTATIONS = [
     {
@@ -87,7 +87,7 @@ export default function ProblemSection() {
                     <Icon className="w-5 h-5" />
                   </div>
                   <span className="text-xs font-mono font-medium text-slate-400">
-                    CHANNEL 0{idx + 1}
+                    {language === 'fr' ? `CANAL 0${idx + 1}` : `CHANNEL 0${idx + 1}`}
                   </span>
                 </div>
                 <h3 className="text-base font-bold text-[#0F172A] tracking-tight">

@@ -154,17 +154,17 @@ export default function BidIntelligenceSection() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
               <div className="text-[11px] font-mono uppercase tracking-wider text-[#2563EB] font-bold">
-                ECONOMIC RECONCILIATION SUMMARY
+                {t.bidIntel.reconcileTag}
               </div>
               <h3 className="text-xl font-bold text-[#0F172A] mt-0.5">
-                The Optical Illusion: Why Headline Lowest ≠ Best Landed Cost
+                {t.bidIntel.reconcileHeadline}
               </h3>
             </div>
             <a
               href="/dashboard/bids"
               className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#2563EB] hover:text-[#1D4ED8]"
             >
-              <span>Explore Live Studio</span>
+              <span>{t.bidIntel.reconcileCta}</span>
               <span className="font-mono">&rarr;</span>
             </a>
           </div>
@@ -173,20 +173,20 @@ export default function BidIntelligenceSection() {
             {/* Supplier B */}
             <div>
               <div className="flex items-center justify-between text-xs font-mono mb-1.5">
-                <span className="font-semibold text-slate-700">Maghreb Clim (Apparent Lowest): MAD 2,270,000</span>
-                <span className="font-bold text-rose-600">+MAD 185,000 Unquoted Scope = MAD 2,455,000</span>
+                <span className="font-semibold text-slate-700">{t.bidIntel.reconcileBName}</span>
+                <span className="font-bold text-rose-600">{t.bidIntel.reconcileBDelta}</span>
               </div>
               <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden flex">
                 <div className="bg-amber-500 h-full" style={{ width: '92.5%' }} />
-                <div className="bg-rose-500 h-full" style={{ width: '7.5%' }} title="Omitted Freight + Crane Hoisting" />
+                <div className="bg-rose-500 h-full" style={{ width: '7.5%' }} />
               </div>
             </div>
 
             {/* Supplier A (Winner) */}
             <div>
               <div className="flex items-center justify-between text-xs font-mono mb-1.5">
-                <span className="font-semibold text-emerald-800">Atlas Clim (Verified Winner): MAD 2,410,000</span>
-                <span className="font-bold text-emerald-700">✓ All-Inclusive Landed: MAD 2,410,000 (Saves MAD 45k)</span>
+                <span className="font-semibold text-emerald-800">{t.bidIntel.reconcileAName}</span>
+                <span className="font-bold text-emerald-700">{t.bidIntel.reconcileASub}</span>
               </div>
               <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden flex">
                 <div className="bg-emerald-500 h-full" style={{ width: '98%' }} />
@@ -196,8 +196,8 @@ export default function BidIntelligenceSection() {
             {/* Supplier C */}
             <div>
               <div className="flex items-center justify-between text-xs font-mono mb-1.5">
-                <span className="font-semibold text-slate-600">Sahara Thermal (Credit Advantage): MAD 2,490,000</span>
-                <span className="font-bold text-blue-600">-MAD 28,000 Working Capital Credit = MAD 2,462,000</span>
+                <span className="font-semibold text-slate-600">{t.bidIntel.reconcileCName}</span>
+                <span className="font-bold text-blue-600">{t.bidIntel.reconcileCSub}</span>
               </div>
               <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden flex">
                 <div className="bg-blue-500 h-full" style={{ width: '100%' }} />

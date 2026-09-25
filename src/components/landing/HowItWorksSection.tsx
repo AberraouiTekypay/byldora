@@ -136,28 +136,28 @@ export default function HowItWorksSection() {
               {/* Floating Blueprint Pin */}
               <div className="absolute top-4 left-4 bg-[#0B1220]/90 backdrop-blur-md border border-[#2563EB]/60 rounded-[8px] px-3 py-1.5 text-xs text-white font-mono flex items-center gap-2 shadow-lg">
                 <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-ping" />
-                <span>LEVEL 38 VERTICAL CIRCULATION PLAN</span>
+                <span>{t.howItWorks.cockpitPin1}</span>
               </div>
 
               {/* Floating BIM Tablet Pin */}
               <div className="absolute bottom-4 right-4 bg-[#0B1220]/90 backdrop-blur-md border border-[#16A34A]/60 rounded-[8px] px-3 py-1.5 text-xs text-white font-mono flex items-center gap-2 shadow-lg">
                 <span className="w-2 h-2 rounded-full bg-[#16A34A]" />
-                <span>BIM REBAR & COLUMN ASSEMBLY SYNC</span>
+                <span>{t.howItWorks.cockpitPin2}</span>
               </div>
             </div>
 
             {/* Description & Action Column */}
             <div className="lg:col-span-5 text-white space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[6px] bg-[#1C2636] border border-[#2A384C] text-xs font-mono text-[#0EA5E9]">
-                <span>FIELD-TO-OFFICE RECONCILIATION</span>
+                <span>{t.howItWorks.cockpitTag}</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white leading-tight">
-                Eliminate the disconnect between drawings, field revisions, and commercial commitments.
+                {t.howItWorks.cockpitHeadline}
               </h3>
 
               <p className="text-sm text-slate-300 leading-relaxed">
-                Site quantity surveyors and lead engineers annotate drawings, verify physical lot deliveries, and cross-reference equipment specs against digital bill of quantities in real-time. No misplaced paper binders, no overlooked revision deltas.
+                {t.howItWorks.cockpitDesc}
               </p>
 
               <div className="space-y-3 pt-2">
@@ -166,7 +166,7 @@ export default function HowItWorksSection() {
                     ✓
                   </div>
                   <span className="text-xs sm:text-sm text-slate-300">
-                    <strong>Direct Blueprint OCR:</strong> Extracts schedules from architectural PDFs into structured BOQ lines.
+                    {t.howItWorks.cockpitPoint1}
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
@@ -174,7 +174,7 @@ export default function HowItWorksSection() {
                     ✓
                   </div>
                   <span className="text-xs sm:text-sm text-slate-300">
-                    <strong>14–26 Week Lead-Time Warning:</strong> Protects project critical-path against factory fabrication delays.
+                    {t.howItWorks.cockpitPoint2}
                   </span>
                 </div>
               </div>
@@ -184,7 +184,7 @@ export default function HowItWorksSection() {
                   href="/dashboard/boq"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[8px] bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-semibold transition-colors shadow-sm"
                 >
-                  <span>Explore BOQ Intelligence Schedule</span>
+                  <span>{t.howItWorks.cockpitCta}</span>
                   <span className="font-mono">&rarr;</span>
                 </a>
               </div>

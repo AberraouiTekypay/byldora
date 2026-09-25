@@ -116,27 +116,31 @@ export default function ConstructionNativeSection() {
             <div className="lg:col-span-6 space-y-5">
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#0B1220] border border-blue-900/60 font-mono text-[11px] text-[#0EA5E9]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#0EA5E9] animate-pulse" />
-                <span>3D BIM & TECHNICAL SPEC EXTRACTION</span>
+                <span>{t.construction.bimTag}</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
-                Architectural models mapped directly to bill-of-quantities line items.
+                {t.construction.bimHeadline}
               </h3>
 
               <p className="text-sm text-slate-300 leading-relaxed">
-                Generic procurement tools fail because construction contracts are technical documents governed by statutory Eurocodes, wind-load ratings, thermal coefficients, and strict milestone logistics. BYLDORA reads and evaluates offers through this exact engineering lens.
+                {t.construction.bimDesc}
               </p>
 
               <div className="grid grid-cols-2 gap-3 pt-2 text-xs font-mono">
                 <div className="p-3 bg-[#1C2636] rounded-[8px] border border-slate-700">
-                  <div className="text-slate-400 text-[10px] uppercase">Compliance Checks</div>
-                  <div className="text-white font-bold text-sm mt-0.5">Eurocodes 1, 3 &amp; 9</div>
-                  <div className="text-[11px] text-emerald-400 mt-1">Wind load &amp; structural steel</div>
+                  <div className="text-slate-400 text-[10px] uppercase">
+                    {language === 'fr' ? 'Contrôles Conformité' : 'Compliance Checks'}
+                  </div>
+                  <div className="text-white font-bold text-sm mt-0.5">{t.construction.bimCheck1Title}</div>
+                  <div className="text-[11px] text-emerald-400 mt-1">{t.construction.bimCheck1Sub}</div>
                 </div>
                 <div className="p-3 bg-[#1C2636] rounded-[8px] border border-slate-700">
-                  <div className="text-slate-400 text-[10px] uppercase">Parametric Unit Rates</div>
-                  <div className="text-white font-bold text-sm mt-0.5">€385 / m² Facade</div>
-                  <div className="text-[11px] text-[#0EA5E9] mt-1">Mullion &amp; assembly breakdown</div>
+                  <div className="text-slate-400 text-[10px] uppercase">
+                    {language === 'fr' ? 'Prix Unitaires Paramétriques' : 'Parametric Unit Rates'}
+                  </div>
+                  <div className="text-white font-bold text-sm mt-0.5">{t.construction.bimCheck2Title}</div>
+                  <div className="text-[11px] text-[#0EA5E9] mt-1">{t.construction.bimCheck2Sub}</div>
                 </div>
               </div>
             </div>
@@ -151,7 +155,7 @@ export default function ConstructionNativeSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/70 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-3 left-3 bg-[#0B1220]/90 backdrop-blur-md px-3 py-1.5 rounded-[6px] border border-cyan-500/40 text-[11px] font-mono text-cyan-300 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                <span>PARAMETRIC MULLION &amp; EUROCODE ENGINE ACTIVE</span>
+                <span>{t.construction.bimBadge}</span>
               </div>
             </div>
 
