@@ -2,6 +2,9 @@
 
 > **Construction procurement, intelligently executed.**  
 > Turn BOQs and project requirements into structured RFQs, comparable supplier bids, and executable procurement decisions.
+>
+> 🌐 **Live Production:** [https://byldora-two.vercel.app](https://byldora-two.vercel.app)  
+> 📑 **System Audit Report:** [SYSTEM_AUDIT.md](SYSTEM_AUDIT.md) — 100% Verified & Passing (Next.js 16 / React 19)
 
 ---
 

@@ -88,6 +88,7 @@ export default function Navbar() {
             
             {/* Bilingual Toggle Button (EN | FR) */}
             <div className="flex items-center bg-[#1C2636] border border-slate-700 rounded-[8px] p-1 text-xs font-mono">
+              <Globe className="w-3.5 h-3.5 text-slate-400 mx-1" />
               <button
                 type="button"
                 onClick={() => setLanguage('en')}
